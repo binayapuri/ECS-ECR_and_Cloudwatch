@@ -1,0 +1,583 @@
+{
+    "service": {
+        "serviceArn": "arn:aws:ecs:us-east-1:426857564226:service/ejs-bp-test/ejs-bp-test",
+        "serviceName": "ejs-bp-test",
+        "clusterArn": "arn:aws:ecs:us-east-1:426857564226:cluster/ejs-bp-test",
+        "loadBalancers": [],
+        "serviceRegistries": [],
+        "status": "ACTIVE",
+        "desiredCount": 1,
+        "runningCount": 1,
+        "pendingCount": 0,
+        "launchType": "FARGATE",
+        "platformVersion": "LATEST",
+        "platformFamily": "Linux",
+        "taskDefinition": "arn:aws:ecs:us-east-1:426857564226:task-definition/ejs-bp-test:10",
+        "deploymentConfiguration": {
+            "deploymentCircuitBreaker": {
+                "enable": false,
+                "rollback": false
+            },
+            "maximumPercent": 200,
+            "minimumHealthyPercent": 66
+        },
+        "deployments": [
+            {
+                "id": "ecs-svc/6537616565547745253",
+                "status": "PRIMARY",
+                "taskDefinition": "arn:aws:ecs:us-east-1:426857564226:task-definition/ejs-bp-test:10",
+                "desiredCount": 1,
+                "pendingCount": 0,
+                "runningCount": 1,
+                "failedTasks": 0,
+                "createdAt": "2023-09-18T15:56:37.918000+05:45",
+                "updatedAt": "2023-09-18T16:02:13.758000+05:45",
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-0ddd7cdc92f22af88",
+                            "subnet-07473217e88f42ed6",
+                            "subnet-0c04e47f9961e66aa"
+                        ],
+                        "securityGroups": [
+                            "sg-0aa85922373ebc9a0"
+                        ],
+                        "assignPublicIp": "DISABLED"
+                    }
+                },
+                "rolloutState": "COMPLETED",
+                "rolloutStateReason": "ECS deployment ecs-svc/6537616565547745253 completed."
+            }
+        ],
+        "roleArn": "arn:aws:iam::426857564226:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+        "events": [
+            {
+                "id": "119ec6f0-13b0-4228-a147-7c28c1a36873",
+                "createdAt": "2023-09-18T16:00:00.685000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "93d52dfa-e816-409b-b71f-e07b83872ffa",
+                "createdAt": "2023-09-18T16:00:00.684000+05:45",
+                "message": "(service ejs-bp-test) (deployment ecs-svc/6537616565547745253) deployment completed."
+            },
+            {
+                "id": "e940184f-032f-4ef8-a751-13cd9f1cedd5",
+                "createdAt": "2023-09-18T15:58:21.653000+05:45",
+                "message": "(service ejs-bp-test) has stopped 1 running tasks: (task eaae12622ac5400885dfd86e09df91d2)."
+            },
+            {
+                "id": "7af821d9-0646-464c-b311-1e96ffbd3722",
+                "createdAt": "2023-09-18T15:56:51.022000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 57fba59f6c0b4551bf222cf250becbf4)."
+            },
+            {
+                "id": "5ddbb208-34eb-442b-ad68-eea8a68d7fb0",
+                "createdAt": "2023-09-18T15:55:39.101000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "f74cf6a5-2641-49b8-b411-c2e0bd255152",
+                "createdAt": "2023-09-18T15:55:39.100000+05:45",
+                "message": "(service ejs-bp-test) (deployment ecs-svc/3346790257732465455) deployment completed."
+            },
+            {
+                "id": "ed4234fb-d49c-4090-bc3c-f05507766c62",
+                "createdAt": "2023-09-18T15:53:49.043000+05:45",
+                "message": "(service ejs-bp-test) has stopped 1 running tasks: (task 49463b90f4d948858fb31f317a0aba8d)."
+            },
+            {
+                "id": "c2e3f428-870a-44ee-9a5f-cff2ce02f0de",
+                "createdAt": "2023-09-18T15:52:17.240000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task eaae12622ac5400885dfd86e09df91d2)."
+            },
+            {
+                "id": "f70ba892-cede-411a-abe9-bd1c5e413932",
+                "createdAt": "2023-09-18T15:51:05.914000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 4f8ee47fade346d8b0a8a2395cd47f42)."
+            },
+            {
+                "id": "0e0af103-6a03-4bd0-8b91-75df8cdbf14b",
+                "createdAt": "2023-09-18T15:50:05.644000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 6a6c90f7d97e42b9a4b57ce49c9b3248)."
+            },
+            {
+                "id": "94051524-26b6-4425-a35e-540e901c6cef",
+                "createdAt": "2023-09-18T15:49:04.166000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task e0e0d4393b7f41e2a2d6cade05a9cd47)."
+            },
+            {
+                "id": "36622eee-7605-4c75-bf5e-1d26dba4db40",
+                "createdAt": "2023-09-18T15:47:53.748000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task c8fe803af0214c71895ab73fb34e4cd3)."
+            },
+            {
+                "id": "f39dcb6b-d8c4-43d3-9afc-ae8e806e28e9",
+                "createdAt": "2023-09-18T15:46:54.190000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 7c3fe67ca4df4aec9b05290155163b7b)."
+            },
+            {
+                "id": "89ea33d6-e0a6-4370-ab65-8f8942baa79a",
+                "createdAt": "2023-09-18T15:45:54.629000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 2f9c95358603450c805832c666e9879a)."
+            },
+            {
+                "id": "ae3a7051-fe88-439f-af17-381555c6eee2",
+                "createdAt": "2023-09-18T15:44:53.246000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 86ab581f62bd44b7a1ff4bcd5230f902)."
+            },
+            {
+                "id": "2369edc7-696d-487e-b823-06e5b057af54",
+                "createdAt": "2023-09-18T15:43:53.407000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task bec2f0e08f594365aaa768941ffefe72)."
+            },
+            {
+                "id": "08b5275c-143a-496e-8f3f-5e96f7db6bfb",
+                "createdAt": "2023-09-18T15:32:27.944000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "3c9ed3a2-387b-46ea-927c-aa9a7bdbbf4f",
+                "createdAt": "2023-09-18T15:32:27.943000+05:45",
+                "message": "(service ejs-bp-test) (deployment ecs-svc/1351122640066705587) deployment completed."
+            },
+            {
+                "id": "c3fa9f7a-eb45-491d-95ea-08a30fed5061",
+                "createdAt": "2023-09-18T15:30:55.937000+05:45",
+                "message": "(service ejs-bp-test) has stopped 1 running tasks: (task a7e84076f7584eedabbbc647606da7a9)."
+            },
+            {
+                "id": "5aa92ff0-209f-41be-bbf9-922ab6e57854",
+                "createdAt": "2023-09-18T15:29:35.193000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 49463b90f4d948858fb31f317a0aba8d)."
+            },
+            {
+                "id": "07a69d93-43ab-4d18-b498-193c2f845e3a",
+                "createdAt": "2023-09-18T14:49:03.353000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "2a2a178b-aef8-45a6-b0ad-24e1e156e02c",
+                "createdAt": "2023-09-18T14:49:03.352000+05:45",
+                "message": "(service ejs-bp-test) (deployment ecs-svc/8232549057194102983) deployment completed."
+            },
+            {
+                "id": "6a0b6582-6a3e-4ab7-9c87-2c05ece83ff0",
+                "createdAt": "2023-09-18T14:47:09.886000+05:45",
+                "message": "(service ejs-bp-test) has stopped 1 running tasks: (task 07b86858a2e848c1af6db82bdefdd4af)."
+            },
+            {
+                "id": "2433fec9-4603-4ae5-9ed1-b8b18c970da1",
+                "createdAt": "2023-09-18T14:45:49.891000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task a7e84076f7584eedabbbc647606da7a9)."
+            },
+            {
+                "id": "ee36958b-fef8-4050-985f-693374fd8ce9",
+                "createdAt": "2023-09-18T14:42:36.544000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "3fea5491-d160-465b-b75f-0a45b46c819a",
+                "createdAt": "2023-09-18T14:42:36.543000+05:45",
+                "message": "(service ejs-bp-test) (deployment ecs-svc/7188125676623625315) deployment completed."
+            },
+            {
+                "id": "b7c794df-d097-42c6-86b3-6375f2772356",
+                "createdAt": "2023-09-18T14:40:46.603000+05:45",
+                "message": "(service ejs-bp-test) has stopped 1 running tasks: (task 86f94279f17b4b9cbf55c75b8abd819f)."
+            },
+            {
+                "id": "bfd8fb97-08d0-4d63-b317-69a041e59a88",
+                "createdAt": "2023-09-18T14:39:26.059000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 07b86858a2e848c1af6db82bdefdd4af)."
+            },
+            {
+                "id": "8cf5db30-b107-4635-ab8e-46c194efcc8e",
+                "createdAt": "2023-09-18T14:27:59.388000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "b97e5d8b-7e9c-44c9-9c2f-db95bdd505d1",
+                "createdAt": "2023-09-18T14:27:59.387000+05:45",
+                "message": "(service ejs-bp-test) (deployment ecs-svc/4265956869407346000) deployment completed."
+            },
+            {
+                "id": "f352a5b1-4676-4463-ad19-4b9bbb634fa5",
+                "createdAt": "2023-09-18T14:25:58.587000+05:45",
+                "message": "(service ejs-bp-test) has stopped 1 running tasks: (task 11090b9549144cb69c238098b7d10e31)."
+            },
+            {
+                "id": "3f6b06ed-02c8-4bd8-b230-f3328cd0d850",
+                "createdAt": "2023-09-18T14:24:37.594000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 86f94279f17b4b9cbf55c75b8abd819f)."
+            },
+            {
+                "id": "1f4ca5fd-1220-4b34-abe2-1f669d986372",
+                "createdAt": "2023-09-18T14:11:20.827000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "1d8cbfa6-c691-466c-a8e7-498e478bbc55",
+                "createdAt": "2023-09-18T14:11:20.826000+05:45",
+                "message": "(service ejs-bp-test) (deployment ecs-svc/6777339480010861667) deployment completed."
+            },
+            {
+                "id": "95d2095c-38e7-4067-ae62-a55a393469f4",
+                "createdAt": "2023-09-18T14:05:26.136000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 11090b9549144cb69c238098b7d10e31)."
+            },
+            {
+                "id": "4ae37197-c932-4cca-81a5-976543cdcc7e",
+                "createdAt": "2023-09-18T13:59:58.636000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 77e47a9684fb4ada9f0e218837631577)."
+            },
+            {
+                "id": "3b80a2fa-9ed3-407a-8d5d-e6f9ef02bf66",
+                "createdAt": "2023-09-18T13:54:03.930000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task f104ff6969014f9a86713a7987e190a0)."
+            },
+            {
+                "id": "660d5da8-c719-48c3-aca5-a01b6b82de19",
+                "createdAt": "2023-09-18T13:48:15.829000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 6996177f4c264f05a4c0a928ea8ff5bb)."
+            },
+            {
+                "id": "39fe2577-08d2-451a-ae99-353ddc54f5f9",
+                "createdAt": "2023-09-18T13:47:05.510000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task b43da93a6ca0436a8d0f370701283f88)."
+            },
+            {
+                "id": "2fd396eb-3c5a-4deb-b7ac-ddd4d6a7435d",
+                "createdAt": "2023-09-18T13:45:55.194000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task f8686014271d4c3dac666f8a1c49517e)."
+            },
+            {
+                "id": "ac7f24e1-3270-4855-8f8b-0caf33105090",
+                "createdAt": "2023-09-18T13:42:27.074000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task a4eab353e2c143cbb54ce5bc46ae64c9)."
+            },
+            {
+                "id": "63ae60df-0786-4f55-9785-ceb908b57f6c",
+                "createdAt": "2023-09-18T13:36:49.202000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task fd91cc328ed94ef2ae6a1a506ead6273)."
+            },
+            {
+                "id": "21cdb814-1e29-4041-bb0f-477f9b48cff5",
+                "createdAt": "2023-09-18T13:35:40.042000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task def86afffd484499ae76267d87015868)."
+            },
+            {
+                "id": "26e8a67c-6b0b-4cff-af23-97c993d68631",
+                "createdAt": "2023-09-18T13:34:30.805000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 1c2316a316244111bc770a791adc2267)."
+            },
+            {
+                "id": "a468547b-4a16-4e68-b5d9-3fae135bb12a",
+                "createdAt": "2023-09-18T13:29:04.702000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 550dd0c6590f48e598595bb2c87d68a4)."
+            },
+            {
+                "id": "4a4602ed-d65f-4736-aa8a-a15e3c7e67f8",
+                "createdAt": "2023-09-18T13:27:54.833000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task bce1fb65e06c4a4083754c79c2ca6b7a)."
+            },
+            {
+                "id": "43be09a7-11ce-4156-8cf4-ce9b366df876",
+                "createdAt": "2023-09-18T13:26:44.231000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task f2884be2149d4946a93f82f2f91013d9)."
+            },
+            {
+                "id": "3ac81bd1-29f4-4bc6-90be-87dc306fa597",
+                "createdAt": "2023-09-18T13:25:50.739000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task a2a3deb1ff294916a86f4088064687c1)."
+            },
+            {
+                "id": "359011f3-ebe9-4b98-bc16-fbf86437fe83",
+                "createdAt": "2023-09-18T13:24:43.698000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task b407612c9cd14409bfa97ab5f66972db)."
+            },
+            {
+                "id": "952bd17c-23a9-41d8-ab9e-8588abbc6d4b",
+                "createdAt": "2023-09-18T13:23:32.301000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task a06d61f8320b4cf185b6ed7e7dd1f9c8)."
+            },
+            {
+                "id": "4205ab18-e6ca-482f-97fd-e024555396fe",
+                "createdAt": "2023-09-18T13:20:20.369000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 20599d2dd6144acba56868eccd02da62)."
+            },
+            {
+                "id": "fc3eaa7c-cfe0-4ff5-83b0-be6b1e35e1b7",
+                "createdAt": "2023-09-18T13:19:08.899000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task be5e597fb52c41c69232f869af54d42d)."
+            },
+            {
+                "id": "cc82dae0-5771-42ab-be48-ef6523e9e434",
+                "createdAt": "2023-09-18T13:17:56.286000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 8622d21b3db24e4aa11b8cf6d4633dea)."
+            },
+            {
+                "id": "4e5ac836-bee1-4853-a65e-33109d5d4aa3",
+                "createdAt": "2023-09-18T13:16:46.530000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task ebffd98fdd434ce7a4ab8b1268efe57e)."
+            },
+            {
+                "id": "2cf8d4a8-f517-4d02-8bd7-3d13bd4d0be9",
+                "createdAt": "2023-09-18T13:15:37.751000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 553d0d525a524f6abee5d72cec9c6545)."
+            },
+            {
+                "id": "63af3d6c-1711-4f9e-9d0c-0b03f9daa86b",
+                "createdAt": "2023-09-18T12:22:19.282000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "3a877a1d-8db7-4e97-84e7-42d7ac1a3948",
+                "createdAt": "2023-09-18T12:21:51.275000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 31fddb696cbb4fe0aa6a32d96a413380)."
+            },
+            {
+                "id": "35bdf099-4de7-4b95-93aa-74029f017837",
+                "createdAt": "2023-09-18T12:20:42.056000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task c66268f0bc0d4cceaaf53bf5a55a0e20)."
+            },
+            {
+                "id": "6f27b005-b231-4068-b1f3-95daf91b3fa2",
+                "createdAt": "2023-09-18T12:19:32.495000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 341acc5854dd4844bd6ee882663a6995)."
+            },
+            {
+                "id": "fa8814d3-f140-46a3-874c-689584368c2c",
+                "createdAt": "2023-09-18T12:18:12.884000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 278f6536e2b04de2aa1b856ba61731b7)."
+            },
+            {
+                "id": "a966e369-dc83-4e40-a12e-98cf795e9f2c",
+                "createdAt": "2023-09-18T12:17:05.049000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task c07a04bcc8e64298bcd0abeee9a487a8)."
+            },
+            {
+                "id": "8b74d3ed-a15f-4742-8e07-aaebcb2156dc",
+                "createdAt": "2023-09-18T12:15:53.886000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task c30b6c8828c9450dbb26bd2f9d7b0beb)."
+            },
+            {
+                "id": "944aa8a7-4378-4a84-9c76-e0c6618fff27",
+                "createdAt": "2023-09-18T12:15:23.327000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "f464f3c5-8ff2-448c-a4aa-f8f173b7a129",
+                "createdAt": "2023-09-18T12:14:55.042000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 60d239ee27c945c79897073ed596f4a4)."
+            },
+            {
+                "id": "9972e6b0-eaf0-47af-a15b-c908e65bc39d",
+                "createdAt": "2023-09-18T12:14:22.687000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "a61d3645-d0fb-4190-ac00-1b61422f4ebb",
+                "createdAt": "2023-09-18T12:13:54.380000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task ace364b19fd048e68143d26b52c8a687)."
+            },
+            {
+                "id": "3fb2112c-7fb7-48e3-8a73-fbbc319f81c1",
+                "createdAt": "2023-09-18T12:13:23.262000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "48630409-5f7b-4ac2-8f90-12c39ade1cd9",
+                "createdAt": "2023-09-18T12:12:46.479000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task d88b3fff21de49878d1346d209f4c62b)."
+            },
+            {
+                "id": "03f06e8f-3931-4754-9902-48013d45c715",
+                "createdAt": "2023-09-18T12:12:15.424000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "8e44183b-90b3-4915-89c5-7c2068b03c1d",
+                "createdAt": "2023-09-18T12:11:37.440000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 46fca86aa11547daba045b23ea76b4f6)."
+            },
+            {
+                "id": "423058db-0cfe-44b6-9cd9-1347f6cb0603",
+                "createdAt": "2023-09-18T12:11:07.357000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "3eee34b1-2a5a-41d7-8345-5147ad636ece",
+                "createdAt": "2023-09-18T12:10:29.334000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task fdda48ff54e142dbbb0b7ac01109f4cb)."
+            },
+            {
+                "id": "d5c3d025-e109-4ac4-ae8e-334792f6c850",
+                "createdAt": "2023-09-18T12:09:59.135000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "ed7c0319-dfe4-4d24-a53b-bfa8fe95a9b4",
+                "createdAt": "2023-09-18T12:09:30.978000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task c3b9b0685ecf4daa9010e63efa9d93c9)."
+            },
+            {
+                "id": "4919ad71-3d2d-47f7-b1f3-64556b14c375",
+                "createdAt": "2023-09-18T12:08:59.131000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "4135fe44-4e38-4142-ae4f-7f9d75bea180",
+                "createdAt": "2023-09-18T12:08:20.663000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task fd5783bea95643e28419c0257d407f9b)."
+            },
+            {
+                "id": "78e1fe88-57a2-40ef-9d65-5543f7ea31be",
+                "createdAt": "2023-09-18T12:07:48.907000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "f7854211-1538-4774-b5f5-cbdcc57c3d30",
+                "createdAt": "2023-09-18T12:07:10.542000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 749b4d1322b941f8b93597cd90dab6d7)."
+            },
+            {
+                "id": "dd486908-e281-4b14-8521-0e9107488173",
+                "createdAt": "2023-09-18T12:06:38.383000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "ea9c2b69-c3d5-491a-9747-47fed86242b1",
+                "createdAt": "2023-09-18T12:05:59.760000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 736621ffa1ae41dbbc74fbc80e9057a4)."
+            },
+            {
+                "id": "2b804989-cc62-44ed-8039-0b164f55ee5c",
+                "createdAt": "2023-09-18T12:05:27.969000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "01f670c5-9ee5-4adb-9377-ac8325758ec3",
+                "createdAt": "2023-09-18T12:04:58.663000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 24c36491bac243b3aa7edb571bb6d630)."
+            },
+            {
+                "id": "df1d95ca-591d-4564-bb83-69a779b6288a",
+                "createdAt": "2023-09-18T12:04:27.202000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "7a4ae225-5180-47eb-b08a-6a0ac62d7439",
+                "createdAt": "2023-09-18T12:03:49.159000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 3902650421654ee9b6b7bc9ddd0f8000)."
+            },
+            {
+                "id": "e2bb9c0e-ce4e-47dc-9240-b7843429c71d",
+                "createdAt": "2023-09-18T12:03:18.211000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "b21a011f-9455-492a-b640-914289e5d60a",
+                "createdAt": "2023-09-18T12:02:50.988000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 4443ea3d0e844d4690e216610344d3d9)."
+            },
+            {
+                "id": "3b8e4059-fb9b-4fc2-8f40-cff807a430fc",
+                "createdAt": "2023-09-18T12:02:18.705000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "371db790-d94c-4842-a888-376e6abd3cfa",
+                "createdAt": "2023-09-18T12:01:50.195000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 3aa9457b905e49a5874922ac096abf06)."
+            },
+            {
+                "id": "45125fde-ff86-49cd-a2f3-a8a43ad2cd84",
+                "createdAt": "2023-09-18T12:01:18.989000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "e95b93d5-9b25-490c-b6be-6e70ccbb03da",
+                "createdAt": "2023-09-18T12:00:49.582000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 63ddda7a665442658938d8511dd527d1)."
+            },
+            {
+                "id": "3c1699ee-08e9-4d74-a69b-0412b3c7f838",
+                "createdAt": "2023-09-18T12:00:17.931000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "31f3f57b-fd77-4695-873b-f373f1cf7c29",
+                "createdAt": "2023-09-18T11:59:49.965000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task efe23d6ac5ec49e5af5fc45c050623bb)."
+            },
+            {
+                "id": "11227ad3-66e5-474f-a5c5-e073a71b71c2",
+                "createdAt": "2023-09-18T11:59:19.349000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "043d5bcc-2c79-45a2-8afc-2aadf8e3dc85",
+                "createdAt": "2023-09-18T11:58:42.451000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 25bc2e67a5b04a3589ffbe66c1e56c40)."
+            },
+            {
+                "id": "e58c5d11-069e-48c1-89ad-e5a049e475da",
+                "createdAt": "2023-09-18T11:58:10.150000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "b590c6e2-1d8a-4b0e-884a-c56a6063c67c",
+                "createdAt": "2023-09-18T11:57:41.643000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 68bb0a2aab434478b3528f616d7ad147)."
+            },
+            {
+                "id": "73f3cfa4-9ab6-44a8-8d28-7aa852ce3653",
+                "createdAt": "2023-09-18T11:57:08.684000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "c82edcdb-aedb-4cd2-960e-b81c56f67748",
+                "createdAt": "2023-09-18T11:56:31.758000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task b53fc5a387e44ba9a72f4ed34088e16b)."
+            },
+            {
+                "id": "8c28d2ea-94e5-4d51-8cbc-2b9b736930fe",
+                "createdAt": "2023-09-18T11:55:59.928000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "0c07dc4f-0cd6-4ea6-9d8a-e4cb362da9e6",
+                "createdAt": "2023-09-18T11:55:31.669000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 65934a43770c47dab87111557f72149f)."
+            }
+        ],
+        "createdAt": "2023-09-18T10:09:37.010000+05:45",
+        "placementConstraints": [],
+        "placementStrategy": [],
+        "networkConfiguration": {
+            "awsvpcConfiguration": {
+                "subnets": [
+                    "subnet-0ddd7cdc92f22af88",
+                    "subnet-07473217e88f42ed6",
+                    "subnet-0c04e47f9961e66aa"
+                ],
+                "securityGroups": [
+                    "sg-0aa85922373ebc9a0"
+                ],
+                "assignPublicIp": "DISABLED"
+            }
+        },
+        "schedulingStrategy": "REPLICA",
+        "deploymentController": {
+            "type": "ECS"
+        },
+        "createdBy": "arn:aws:iam::426857564226:user/binaya.puri",
+        "enableECSManagedTags": true,
+        "propagateTags": "NONE",
+        "enableExecuteCommand": true
+    }
+}

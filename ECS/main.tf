@@ -57,11 +57,6 @@ module "ecs_cluster" {
   tags = local.tags
 }
 
-
-
-
-
-
 module "product_service" {
   source                 = "terraform-aws-modules/ecs/aws//modules/service"
   version                = "5.2.2"
@@ -83,36 +78,57 @@ module "product_service" {
   network_mode = "awsvpc"
 
 
-
-  container_definitions = {
-
-    (var.container_name) = {
-      cpu       = 512
-      memory    = 1024
-      essential = true
-      image     = "426857564226.dkr.ecr.us-east-1.amazonaws.com/ecr-image-bp:latest"
-      interactive = true
-      port_mappings = [
-        {
-          name          = local.name
-          containerPort = 80
-          hostPort      = 80
-          protocol      = "tcp"
-        }
-      ]
-      enable_cloudwatch_logging = true
-      memory_reservation        = 100
-    }
+container_definitions = {
+  (var.container_name) = {
+    cpu       = 512
+    memory    = 1024
+    essential = true
+    image     = "426857564226.dkr.ecr.us-east-1.amazonaws.com/ecr-image-bp:latest"
+    interactive = true
+    port_mappings = [
+      {
+        name          = local.name
+        containerPort = 80
+        hostPort      = 80
+        protocol      = "tcp"
+      }
+    ]
+    pseudo_terminal = true
+    enable_cloudwatch_logging = true
+    memory_reservation        = 100
+    linux_parameters         = var.linux_parameters
+    command = ["ecs-agent", "execute-command"]  # Enable ExecuteCommand
+    # linuxParameters= {
+    #   "initProcessEnabled": true
+    # }
 
   }
+}
 
   subnet_ids = module.vpc.private_subnets
+  
+  security_group_rules = {
+    alb_ingress_3000 = {
+      type                     = "ingress"
+      from_port                = 80
+      to_port                  = 80
+      protocol                 = "tcp"
+      description              = "Product Service Port"
+      cidr_blocks              = ["0.0.0.0/0"]
+      # source_security_group_id = data.terraform_remote_state.base_resources.outputs.security_group_id
+    }
 
-
-
-
+    egress_all = {
+      type        = "egress"
+      from_port   = 0
+      to_port     = 0
+      protocol    = "-1"
+      cidr_blocks = ["0.0.0.0/0"]
+    }
+  }
   tags = local.tags
 }
+
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
@@ -131,72 +147,24 @@ module "vpc" {
   tags = local.tags
 }
 
-
-resource "aws_security_group" "ecs_ssh_sg" {
-  name        = "ecs-ssh-sg"
-  description = "Security group for SSH access to ECS containers"
-  vpc_id      = module.vpc.vpc_id
-
-  # Allow SSH access
-  ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] 
-  }
-
-}
-
-
-
-resource "aws_instance" "bastion_host" {
-  ami           = "ami-04cb4ca688797756f" 
-  instance_type = "t2.micro"            
-  subnet_id     = module.vpc.public_subnets[0] 
-  # associate_public_ip_address = "true"
-  key_name      = "hackathon"            
-  vpc_security_group_ids = [aws_security_group.ecs_ssh_sg.id]
-  root_block_device {
-    volume_type           = "gp2"
-    volume_size           = "8"
-    delete_on_termination = true
-  }
-  volume_tags = local.tags
-  tags = {
-    Name    = "bastion-host"
-    Project = local.project
-    owner = "binay"
-  }
-}
-
-
-resource "aws_iam_role" "ssm_instance_role" {
-  name = "ssm-instance-role"
-
-  assume_role_policy = jsonencode({
-    Version = "2012-10-17",
-    Statement = [
+resource "aws_iam_role_policy" "task_definition_exec_role-policy" {
+  name = "${local.name}-task-definition-role-policy"
+  role = module.product_service.tasks_iam_role_name
+  policy = jsonencode({
+    "Version" : "2012-10-17",
+    "Statement" : [
       {
-        Action = "sts:AssumeRole",
-        Effect = "Allow",
-        Principal = {
-          Service = "ec2.amazonaws.com"
-        }
-      },
-      {
-        Action = "sts:AssumeRole",
-        Effect = "Allow",
-        Principal = {
-          Service = "ssm.amazonaws.com"
-        }
+        "Effect" : "Allow",
+        "Action" : [
+          "ssmmessages:CreateControlChannel",
+          "ssmmessages:CreateDataChannel",
+          "ssmmessages:OpenControlChannel",
+          "ssmmessages:OpenDataChannel"
+        ],
+
+        "Resource" : "*"
+     
       }
     ]
   })
-}
-
-
-resource "aws_iam_instance_profile" "ssm_instance_profile" {
-  name = "ssm-instance-profile"
-
-  role = aws_iam_role.ssm_instance_role.name
 }

@@ -1,10 +1,6 @@
-
-
-module "ECR"{
+module "ECR" {
   source = "./ECR"
 }
-
-
-module "ECS"{
+module "ECS" {
   source = "./ECS"
 }

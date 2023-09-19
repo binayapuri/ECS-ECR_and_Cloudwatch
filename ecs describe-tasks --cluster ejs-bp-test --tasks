@@ -1,0 +1,169 @@
+{
+    "service": {
+        "serviceArn": "arn:aws:ecs:us-east-1:426857564226:service/ejs-bp-test/ejs-bp-test",
+        "serviceName": "ejs-bp-test",
+        "clusterArn": "arn:aws:ecs:us-east-1:426857564226:cluster/ejs-bp-test",
+        "loadBalancers": [],
+        "serviceRegistries": [],
+        "status": "ACTIVE",
+        "desiredCount": 1,
+        "runningCount": 1,
+        "pendingCount": 0,
+        "launchType": "FARGATE",
+        "platformVersion": "LATEST",
+        "platformFamily": "Linux",
+        "taskDefinition": "arn:aws:ecs:us-east-1:426857564226:task-definition/ejs-bp-test:10",
+        "deploymentConfiguration": {
+            "deploymentCircuitBreaker": {
+                "enable": false,
+                "rollback": false
+            },
+            "maximumPercent": 200,
+            "minimumHealthyPercent": 66
+        },
+        "deployments": [
+            {
+                "id": "ecs-svc/6537616565547745253",
+                "status": "PRIMARY",
+                "taskDefinition": "arn:aws:ecs:us-east-1:426857564226:task-definition/ejs-bp-test:10",
+                "desiredCount": 1,
+                "pendingCount": 0,
+                "runningCount": 1,
+                "failedTasks": 0,
+                "createdAt": "2023-09-18T15:56:37.918000+05:45",
+                "updatedAt": "2023-09-18T16:00:00.677000+05:45",
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-0ddd7cdc92f22af88",
+                            "subnet-07473217e88f42ed6",
+                            "subnet-0c04e47f9961e66aa"
+                        ],
+                        "securityGroups": [
+                            "sg-0aa85922373ebc9a0"
+                        ],
+                        "assignPublicIp": "DISABLED"
+                    }
+                },
+                "rolloutState": "COMPLETED",
+                "rolloutStateReason": "ECS deployment ecs-svc/6537616565547745253 completed."
+            }
+        ],
+        "roleArn": "arn:aws:iam::426857564226:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+        "events": [
+            {
+                "id": "119ec6f0-13b0-4228-a147-7c28c1a36873",
+                "createdAt": "2023-09-18T16:00:00.685000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "93d52dfa-e816-409b-b71f-e07b83872ffa",
+                "createdAt": "2023-09-18T16:00:00.684000+05:45",
+                "message": "(service ejs-bp-test) (deployment ecs-svc/6537616565547745253) deployment completed."
+            },
+            {
+                "id": "e940184f-032f-4ef8-a751-13cd9f1cedd5",
+                "createdAt": "2023-09-18T15:58:21.653000+05:45",
+                "message": "(service ejs-bp-test) has stopped 1 running tasks: (task eaae12622ac5400885dfd86e09df91d2)."
+            },
+            {
+                "id": "7af821d9-0646-464c-b311-1e96ffbd3722",
+                "createdAt": "2023-09-18T15:56:51.022000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 57fba59f6c0b4551bf222cf250becbf4)."
+            },
+            {
+                "id": "5ddbb208-34eb-442b-ad68-eea8a68d7fb0",
+                "createdAt": "2023-09-18T15:55:39.101000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "f74cf6a5-2641-49b8-b411-c2e0bd255152",
+                "createdAt": "2023-09-18T15:55:39.100000+05:45",
+                "message": "(service ejs-bp-test) (deployment ecs-svc/3346790257732465455) deployment completed."
+            },
+            {
+                "id": "ed4234fb-d49c-4090-bc3c-f05507766c62",
+                "createdAt": "2023-09-18T15:53:49.043000+05:45",
+                "message": "(service ejs-bp-test) has stopped 1 running tasks: (task 49463b90f4d948858fb31f317a0aba8d)."
+            },
+            {
+                "id": "c2e3f428-870a-44ee-9a5f-cff2ce02f0de",
+                "createdAt": "2023-09-18T15:52:17.240000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task eaae12622ac5400885dfd86e09df91d2)."
+            },
+            {
+                "id": "f70ba892-cede-411a-abe9-bd1c5e413932",
+                "createdAt": "2023-09-18T15:51:05.914000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 4f8ee47fade346d8b0a8a2395cd47f42)."
+            },
+            {
+                "id": "0e0af103-6a03-4bd0-8b91-75df8cdbf14b",
+                "createdAt": "2023-09-18T15:50:05.644000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 6a6c90f7d97e42b9a4b57ce49c9b3248)."
+            },
+            {
+                "id": "94051524-26b6-4425-a35e-540e901c6cef",
+                "createdAt": "2023-09-18T15:49:04.166000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task e0e0d4393b7f41e2a2d6cade05a9cd47)."
+            },
+            {
+                "id": "36622eee-7605-4c75-bf5e-1d26dba4db40",
+                "createdAt": "2023-09-18T15:47:53.748000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task c8fe803af0214c71895ab73fb34e4cd3)."
+            },
+            {
+                "id": "f39dcb6b-d8c4-43d3-9afc-ae8e806e28e9",
+                "createdAt": "2023-09-18T15:46:54.190000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 7c3fe67ca4df4aec9b05290155163b7b)."
+            },
+            {
+                "id": "89ea33d6-e0a6-4370-ab65-8f8942baa79a",
+                "createdAt": "2023-09-18T15:45:54.629000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 2f9c95358603450c805832c666e9879a)."
+            },
+            {
+                "id": "ae3a7051-fe88-439f-af17-381555c6eee2",
+                "createdAt": "2023-09-18T15:44:53.246000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 86ab581f62bd44b7a1ff4bcd5230f902)."
+            },
+            {
+                "id": "2369edc7-696d-487e-b823-06e5b057af54",
+                "createdAt": "2023-09-18T15:43:53.407000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task bec2f0e08f594365aaa768941ffefe72)."
+            },
+            {
+                "id": "08b5275c-143a-496e-8f3f-5e96f7db6bfb",
+                "createdAt": "2023-09-18T15:32:27.944000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "3c9ed3a2-387b-46ea-927c-aa9a7bdbbf4f",
+                "createdAt": "2023-09-18T15:32:27.943000+05:45",
+                "message": "(service ejs-bp-test) (deployment ecs-svc/1351122640066705587) deployment completed."
+            },
+            {
+                "id": "c3fa9f7a-eb45-491d-95ea-08a30fed5061",
+                "createdAt": "2023-09-18T15:30:55.937000+05:45",
+                "message": "(service ejs-bp-test) has stopped 1 running tasks: (task a7e84076f7584eedabbbc647606da7a9)."
+            },
+            {
+                "id": "5aa92ff0-209f-41be-bbf9-922ab6e57854",
+                "createdAt": "2023-09-18T15:29:35.193000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task 49463b90f4d948858fb31f317a0aba8d)."
+            },
+            {
+                "id": "07a69d93-43ab-4d18-b498-193c2f845e3a",
+                "createdAt": "2023-09-18T14:49:03.353000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "2a2a178b-aef8-45a6-b0ad-24e1e156e02c",
+                "createdAt": "2023-09-18T14:49:03.352000+05:45",
+                "message": "(service ejs-bp-test) (deployment ecs-svc/8232549057194102983) deployment completed."
+            },
+            {
+                "id": "6a0b6582-6a3e-4ab7-9c87-2c05ece83ff0",
+   

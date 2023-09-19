@@ -1,0 +1,98 @@
+{
+    "service": {
+        "serviceArn": "arn:aws:ecs:us-east-1:426857564226:service/ejs-bp-test/ejs-bp-test",
+        "serviceName": "ejs-bp-test",
+        "clusterArn": "arn:aws:ecs:us-east-1:426857564226:cluster/ejs-bp-test",
+        "loadBalancers": [],
+        "serviceRegistries": [],
+        "status": "ACTIVE",
+        "desiredCount": 1,
+        "runningCount": 1,
+        "pendingCount": 0,
+        "launchType": "FARGATE",
+        "platformVersion": "LATEST",
+        "platformFamily": "Linux",
+        "taskDefinition": "arn:aws:ecs:us-east-1:426857564226:task-definition/ejs-bp-test:14",
+        "deploymentConfiguration": {
+            "deploymentCircuitBreaker": {
+                "enable": false,
+                "rollback": false
+            },
+            "maximumPercent": 200,
+            "minimumHealthyPercent": 66
+        },
+        "deployments": [
+            {
+                "id": "ecs-svc/5808103828271497476",
+                "status": "PRIMARY",
+                "taskDefinition": "arn:aws:ecs:us-east-1:426857564226:task-definition/ejs-bp-test:14",
+                "desiredCount": 1,
+                "pendingCount": 0,
+                "runningCount": 1,
+                "failedTasks": 0,
+                "createdAt": "2023-09-19T11:22:17.877000+05:45",
+                "updatedAt": "2023-09-19T11:25:30.303000+05:45",
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-0b632e23ffe501e4a",
+                            "subnet-0b68d961531cbeb30",
+                            "subnet-0db2a6138d50396ec"
+                        ],
+                        "securityGroups": [
+                            "sg-0adbbe7dd5eec1a30"
+                        ],
+                        "assignPublicIp": "DISABLED"
+                    }
+                },
+                "rolloutState": "COMPLETED",
+                "rolloutStateReason": "ECS deployment ecs-svc/5808103828271497476 completed."
+            }
+        ],
+        "roleArn": "arn:aws:iam::426857564226:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+        "events": [
+            {
+                "id": "6a3c8d85-019a-4865-9cc2-92f183c6ff35",
+                "createdAt": "2023-09-19T11:24:45.132000+05:45",
+                "message": "(service ejs-bp-test) has reached a steady state."
+            },
+            {
+                "id": "a09943b1-786c-408f-af7f-40ad16056d13",
+                "createdAt": "2023-09-19T11:24:45.131000+05:45",
+                "message": "(service ejs-bp-test) (deployment ecs-svc/5808103828271497476) deployment completed."
+            },
+            {
+                "id": "47878f18-0882-4185-9fdd-c9aa5bf388f0",
+                "createdAt": "2023-09-19T11:22:19.195000+05:45",
+                "message": "(service ejs-bp-test) has started 1 tasks: (task a3227f697ca14c189b869811701da70a)."
+            }
+        ],
+        "createdAt": "2023-09-19T11:22:17.877000+05:45",
+        "placementConstraints": [],
+        "placementStrategy": [],
+        "networkConfiguration": {
+            "awsvpcConfiguration": {
+                "subnets": [
+                    "subnet-0b632e23ffe501e4a",
+                    "subnet-0b68d961531cbeb30",
+                    "subnet-0db2a6138d50396ec"
+                ],
+                "securityGroups": [
+                    "sg-0adbbe7dd5eec1a30"
+                ],
+                "assignPublicIp": "DISABLED"
+            }
+        },
+        "schedulingStrategy": "REPLICA",
+        "deploymentController": {
+            "type": "ECS"
+        },
+        "createdBy": "arn:aws:iam::426857564226:user/binaya.puri",
+        "enableECSManagedTags": true,
+        "propagateTags": "NONE",
+        "enableExecuteCommand": true
+    }
+}
