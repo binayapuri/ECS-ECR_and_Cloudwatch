@@ -1,0 +1,104 @@
+{
+    "tasks": [
+        {
+            "attachments": [
+                {
+                    "id": "9d1cc8a9-23d6-450b-a044-0a9e830576c8",
+                    "type": "ElasticNetworkInterface",
+                    "status": "ATTACHED",
+                    "details": [
+                        {
+                            "name": "subnetId",
+                            "value": "subnet-0db2a6138d50396ec"
+                        },
+                        {
+                            "name": "networkInterfaceId",
+                            "value": "eni-092bd4072c9b58865"
+                        },
+                        {
+                            "name": "macAddress",
+                            "value": "0a:11:d6:d9:81:7d"
+                        },
+                        {
+                            "name": "privateDnsName",
+                            "value": "ip-10-0-4-220.ec2.internal"
+                        },
+                        {
+                            "name": "privateIPv4Address",
+                            "value": "10.0.4.220"
+                        }
+                    ]
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "ecs.cpu-architecture",
+                    "value": "x86_64"
+                }
+            ],
+            "availabilityZone": "us-east-1a",
+            "clusterArn": "arn:aws:ecs:us-east-1:426857564226:cluster/ejs-bp-test",
+            "connectivity": "CONNECTED",
+            "connectivityAt": "2023-09-19T11:22:22.450000+05:45",
+            "containers": [
+                {
+                    "containerArn": "arn:aws:ecs:us-east-1:426857564226:container/ejs-bp-test/a3227f697ca14c189b869811701da70a/96234eb5-63df-4567-9637-a1b507b61b7c",
+                    "taskArn": "arn:aws:ecs:us-east-1:426857564226:task/ejs-bp-test/a3227f697ca14c189b869811701da70a",
+                    "name": "bp-test",
+                    "image": "426857564226.dkr.ecr.us-east-1.amazonaws.com/ecr-image-bp:latest",
+                    "imageDigest": "sha256:5dab06103ac0bb2f41ae05133e57228e78a8f9d41be9c71c9adc699d16659f59",
+                    "runtimeId": "a3227f697ca14c189b869811701da70a-4167395054",
+                    "lastStatus": "RUNNING",
+                    "networkBindings": [],
+                    "networkInterfaces": [
+                        {
+                            "attachmentId": "9d1cc8a9-23d6-450b-a044-0a9e830576c8",
+                            "privateIpv4Address": "10.0.4.220"
+                        }
+                    ],
+                    "healthStatus": "UNKNOWN",
+                    "managedAgents": [
+                        {
+                            "name": "ExecuteCommandAgent",
+                            "lastStatus": "STOPPED"
+                        }
+                    ],
+                    "cpu": "512",
+                    "memory": "1024",
+                    "memoryReservation": "100"
+                }
+            ],
+            "cpu": "1024",
+            "createdAt": "2023-09-19T11:22:19.090000+05:45",
+            "desiredStatus": "RUNNING",
+            "enableExecuteCommand": true,
+            "group": "service:ejs-bp-test",
+            "healthStatus": "UNKNOWN",
+            "lastStatus": "RUNNING",
+            "launchType": "FARGATE",
+            "memory": "2048",
+            "overrides": {
+                "containerOverrides": [
+                    {
+                        "name": "bp-test"
+                    }
+                ],
+                "inferenceAcceleratorOverrides": []
+            },
+            "platformVersion": "1.4.0",
+            "platformFamily": "Linux",
+            "pullStartedAt": "2023-09-19T11:24:30.611000+05:45",
+            "pullStoppedAt": "2023-09-19T11:24:42.890000+05:45",
+            "startedAt": "2023-09-19T11:24:43.848000+05:45",
+            "startedBy": "ecs-svc/5808103828271497476",
+            "tags": [],
+            "taskArn": "arn:aws:ecs:us-east-1:426857564226:task/ejs-bp-test/a3227f697ca14c189b869811701da70a",
+            "taskDefinitionArn": "arn:aws:ecs:us-east-1:426857564226:task-definition/ejs-bp-test:14",
+            "version": 3,
+            "ephemeralStorage": {
+                "sizeInGiB": 20
+            }
+        }
+    ],
+    "failures": []
+}

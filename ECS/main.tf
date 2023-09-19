@@ -84,6 +84,7 @@ container_definitions = {
     memory    = 1024
     essential = true
     image     = "426857564226.dkr.ecr.us-east-1.amazonaws.com/ecr-image-bp:latest"
+    # image     = "amazonlinux:latest"
     interactive = true
     port_mappings = [
       {
@@ -94,10 +95,11 @@ container_definitions = {
       }
     ]
     pseudo_terminal = true
+    readonly_root_filesystem = false
     enable_cloudwatch_logging = true
     memory_reservation        = 100
     linux_parameters         = var.linux_parameters
-    command = ["ecs-agent", "execute-command"]  # Enable ExecuteCommand
+    # command = ["ecs-agent", "execute-command"]  # Enable ExecuteCommand
     # linuxParameters= {
     #   "initProcessEnabled": true
     # }
@@ -159,7 +161,10 @@ resource "aws_iam_role_policy" "task_definition_exec_role-policy" {
           "ssmmessages:CreateControlChannel",
           "ssmmessages:CreateDataChannel",
           "ssmmessages:OpenControlChannel",
-          "ssmmessages:OpenDataChannel"
+          "ssmmessages:OpenDataChannel",
+          "cloudwatch:PutMetricData",
+          "cloudwatch:GetMetricStatistics",
+          "cloudwatch:ListMetrics"           
         ],
 
         "Resource" : "*"
